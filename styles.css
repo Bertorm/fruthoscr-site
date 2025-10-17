@@ -1,12 +1,60 @@
 
-:root { --max: 860px; }
-* { box-sizing: border-box; }
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; margin: 0; }
-.container { max-width: var(--max); margin: 0 auto; padding: 1rem; }
-header { background: #f7f7f7; border-bottom: 1px solid #e5e5e5; }
-header h1 { margin: 0.2rem 0; }
-.subtitle { margin-top: 0; color: #555; }
-nav a { margin-right: 1rem; text-decoration: none; }
-h1, h2 { line-height: 1.25; }
-ul { padding-left: 1.25rem; }
-footer { border-top: 1px solid #e5e5e5; background: #fafafa; }
+:root{
+  --bg:#ffffff;
+  --fg:#0b2e1f;
+  --muted:#517162;
+  --brand:#0f7b53;
+  --brand-2:#0aa06e;
+  --card:#f5f7f6;
+  --radius:18px;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--fg);background:var(--bg);line-height:1.6}
+.container{max-width:var(--container);margin-inline:auto;padding:1rem}
+.skip-link{position:absolute;left:-9999px}
+.skip-link:focus{left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem .75rem;border-radius:.5rem;z-index:99}
+.site-header{position:sticky;top:0;backdrop-filter:saturate(150%) blur(6px);background:rgba(255,255,255,.85);border-bottom:1px solid #e6ece8;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+.hamburger{display:none;cursor:pointer}
+.hamburger span{display:block;width:24px;height:2px;background:#222;margin:5px 0;border-radius:1px}
+#nav-toggle{display:none}
+.menu{display:flex;gap:1rem}
+.menu a{color:var(--fg);text-decoration:none;padding:.5rem .75rem;border-radius:10px}
+.menu a:hover{background:#edf3ef}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:2rem;padding-block:3rem}
+.hero-text h1{font-size:clamp(1.8rem,3vw,3.1rem);line-height:1.1;margin:.2rem 0}
+.hero-text p{color:var(--muted);font-size:1.05rem;margin:0 0 1rem 0}
+.cta-row{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;border:2px solid var(--brand);padding:.7rem 1rem;border-radius:12px;text-decoration:none;font-weight:600}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border:none}
+.btn-outline{color:var(--brand);background:transparent}
+.btn:hover{opacity:.9}
+.hero-media img{width:100%;height:auto;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.07)}
+.products{padding-block:2rem}
+.products h2{font-size:1.8rem;margin-bottom:1rem}
+.grid-prod{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.prod{background:#fff;border:1px solid #e7ece9;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.05);text-align:center}
+.prod img{display:block;width:100%;height:160px;object-fit:cover}
+.prod h3{margin:.6rem 0 1rem 0}
+.features{padding-block:2rem}
+.features h2{font-size:1.8rem;margin-bottom:1rem}
+.story{max-width:900px}
+.story p{margin:.6rem 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;list-style:none;padding:0;margin:1rem 0 0 0}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 4px 14px rgba(0,0,0,.04)}
+.card h3{margin:.2rem 0}
+.contact{padding-block:2rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form{display:grid;gap:.6rem}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #dfe7e3;border-radius:12px;padding:.6rem .75rem;font:inherit}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid #bfe3d2;border-color:#97d3b8}
+.site-footer{border-top:1px solid #e6ece8;margin-top:2rem;background:#fafdfb}
+.site-footer .container{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.foot-nav{display:flex;gap:.75rem}
+.foot-nav a{text-decoration:none;color:var(--fg)}
+@media (max-width:1100px){.grid-prod{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.grid-prod{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.menu{display:none;position:absolute;top:60px;right:10px;background:#fff;border:1px solid #e6ece8;border-radius:12px;flex-direction:column;padding:.5rem;box-shadow:0 10px 24px rgba(0,0,0,.06)}#nav-toggle:checked ~ .hamburger + .menu, #nav-toggle:checked + .hamburger + .menu{display:flex}.hamburger{display:block}}

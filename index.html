@@ -3,47 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fruthos del Trópico — Sitio Oficial</title>
-  <meta name="description" content="Sitio oficial — rápido, seguro y accesible.">
+  <title>Fruthos del Trópico — Comercialización y producción de frutas tropicales</title>
+  <meta name="description" content="Empresa costarricense experta en comercialización de frutas tropicales y con línea de exportación.">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/styles.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0f7b53">
+  <meta name="robots" content="index,follow">
 </head>
 <body>
-  <header class="container">
-    <h1>Fruthos del Trópico</h1>
-    <p class="subtitle">Página rápida, segura y confiable.</p>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a href="/politica-privacidad.html">Privacidad</a>
-    </nav>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="/assets/logo.svg" alt="" width="28" height="28" aria-hidden="true">
+        <span>Fruthos del Trópico</span>
+      </div>
+      <input id="nav-toggle" type="checkbox" aria-label="Abrir menú">
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="menu" aria-label="Principal">
+        <a href="#productos">Productos</a>
+        <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#contacto">Contáctenos</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section id="servicios">
-      <h2>¿Qué hacemos?</h2>
-      <p>Exportación y distribución de productos frescos del trópico. Este sitio está construido como una página estática: ultrarrápida y con medidas modernas de seguridad.</p>
+  <main id="contenido">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Expertos en comercialización y producción de frutas tropicales.</h1>
+        <p>Nos especializamos en la comercialización de frutas tropicales en Costa Rica, ofreciendo productos frescos, seleccionados y de calidad. Además, desarrollamos exportaciones de frutas con el mismo estándar que nos distingue en el mercado nacional.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+          <a class="btn btn-outline" href="#productos">Ver nuestros productos</a>
+        </div>
+      </div>
+      <div class="hero-media" role="img" aria-label="Frutas frescas tropicales">
+        <img src="/assets/hero.jpg" alt="" loading="eager">
+      </div>
     </section>
 
-    <section id="confianza">
-      <h2>Confiabilidad y seguridad</h2>
-      <ul>
-        <li>HTTPS forzado y HSTS</li>
-        <li>Cabeceras de seguridad (CSP, X-Content-Type-Options, etc.)</li>
-        <li>Sin cookies ni trackers por defecto</li>
-        <li>Accesible (WCAG 2.1 AA — base)</li>
+    <section id="productos" class="products container">
+      <h2>Nuestros productos</h2>
+      <div class="grid-prod">
+        <figure class="prod">
+          <img src="/assets/banano.jpg" alt="Banano"><figcaption><h3>Banano</h3></figcaption>
+        </figure>
+        <figure class="prod">
+          <img src="/assets/pina.jpg" alt="Piña"><figcaption><h3>Piña</h3></figcaption>
+        </figure>
+        <figure class="prod">
+          <img src="/assets/melon.jpg" alt="Melón"><figcaption><h3>Melón</h3></figcaption>
+        </figure>
+        <figure class="prod">
+          <img src="/assets/papaya.jpg" alt="Papaya"><figcaption><h3>Papaya</h3></figcaption>
+        </figure>
+        <figure class="prod">
+          <img src="/assets/limon.jpg" alt="Limón"><figcaption><h3>Limón</h3></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="por-que" class="features container">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="story">
+        <p>El alma de <strong>Fruthos del Trópico</strong> nació en los principales mercados de Costa Rica.</p>
+        <p>Hace más de 40 años se gestó pequeña, con las manos, y se hizo fuerte entre los pasillos de los mercados, entre camiones de fruta y acaloradas negociaciones de compra y venta.</p>
+        <p>De vender en los mercados, pasó a trabajar la tierra y cultivar para la comercialización en todo el país y en el extranjero. Una empresa familiar que creció y se hizo reconocida en Costa Rica.</p>
+        <p><strong>Fruthos del Trópico</strong> es una empresa que busca dar a conocer las bondades de las frutas tropicales fuera de nuestras fronteras.</p>
+      </div>
+      <ul class="cards">
+        <li class="card"><h3>Tradición y experiencia familiar</h3></li>
+        <li class="card"><h3>Calidad y trazabilidad garantizada</h3></li>
+        <li class="card"><h3>Compromiso con productores locales</h3></li>
       </ul>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Correo: <a href="mailto:info@fruthoscr.com">info@fruthoscr.com</a></p>
+    <section id="contacto" class="contact container">
+      <h2>Contáctenos</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Fruthos del Trópico S.A.</strong></p>
+          <p>Dentro del CENADA, Bodega 1241<br>Heredia, Costa Rica<br>Código postal: 4 40104</p>
+          <p><strong>Teléfono:</strong> <a href="tel:+50640522070">+506 4052 2070</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/50688990707">+506 8899 0707</a></p>
+          <p><strong>Correo:</strong> <a href="mailto:info@fruthoscr.com">info@fruthoscr.com</a></p>
+        </div>
+        <form class="contact-form" method="post" action="#" aria-describedby="form-help">
+          <label>Nombre
+            <input type="text" name="nombre" autocomplete="name" required>
+          </label>
+          <label>Correo
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>Mensaje
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit" disabled aria-disabled="true" title="Formulario demostrativo — integrar backend">Enviar</button>
+          <small id="form-help">Formulario demostrativo. Para habilitar envíos, integre un servicio y ajuste la CSP.</small>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="container">
-    <small>&copy; 2025 Fruthos del Trópico S.A.</small>
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="foot-nav">
+        <a href="#productos">Productos</a>
+        <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#contacto">Contáctenos</a>
+        <a href="/politica-privacidad.html">Privacidad</a>
+      </nav>
+      <small>&copy; 2025 Fruthos del Trópico S.A. — Todos los derechos reservados.</small>
+    </div>
   </footer>
 </body>
 </html>
