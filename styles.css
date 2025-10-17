@@ -75,33 +75,36 @@ body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--brand);    /* Usa el morado corporativo */
   letter-spacing: 0.5px;  /* Espaciado elegante entre letras */
 }
-/* ===== Centrado del texto en móviles ===== */
+/* ===== Centrado del texto sin reducir el logo ===== */
 @media (max-width: 600px) {
   .brand {
     display: flex;
-    align-items: center;       /* centra verticalmente */
-    justify-content: center;   /* centra horizontalmente */
-    width: 100%;               /* ocupa todo el ancho disponible */
+    align-items: center;         /* centra verticalmente */
+    justify-content: center;     /* centra horizontalmente */
+    width: 100%;
     position: relative;
   }
 
+  /* Mantiene el logo con su tamaño real y lo fija a la izquierda */
   .brand img {
     position: absolute;
-    left: 10px;                /* logo fijo a la izquierda */
+    left: 10px;                  /* lo fija al borde izquierdo */
     top: 50%;
     transform: translateY(-50%);
-    width: 55px;               /* mantiene buen tamaño en móvil */
-    height: auto;
+    height: auto;                /* conserva proporción */
+    width: auto;                 /* no se fuerza tamaño pequeño */
+    max-height: 60px;            /* límite visual razonable */
   }
 
+  /* Texto centrado en el header */
   .brand span {
-    font-size: 1.6rem;         /* ajusta según tu gusto */
+    font-size: 1.6rem;           /* tamaño del texto */
     font-weight: 800;
     color: var(--brand);
     text-align: center;
   }
 
-  /* opcional: centra el menú hamburguesa a la derecha */
+  /* Asegura que el menú hamburguesa quede bien alineado */
   .hamburger {
     position: absolute;
     right: 10px;
