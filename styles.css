@@ -75,61 +75,37 @@ body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--brand);    /* Usa el morado corporativo */
   letter-spacing: 0.5px;  /* Espaciado elegante entre letras */
 }
-/* ===== Header móvil: logo izq + nombre centrado ===== */
-@media (max-width: 600px){
-  .site-header{
-    height: 64px;              /* alto fijo para centrar verticalmente el texto */
-  }
-  .nav{
-    position: relative;        /* referencia para posicionar el texto centrado */
-    min-height: 64px;
-  }
-  .brand{
-    position: relative;
+/* ===== Centrado del texto en móviles ===== */
+@media (max-width: 600px) {
+  .brand {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;  /* logo a la izquierda */
-    gap: 8px;
-  }
-  .brand img{
-    width: 40px;               /* ajustá si querés un logo más grande/pequeño */
-    height: 40px;
-    margin-left: 0;
-  }
-  .brand span{
-    position: absolute;        /* centramos el nombre independiente del logo */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 70%;                /* evita que choque con el menú/hamburguesa */
-    z-index: 1;
+    align-items: center;       /* centra verticalmente */
+    justify-content: center;   /* centra horizontalmente */
+    width: 100%;               /* ocupa todo el ancho disponible */
+    position: relative;
   }
 
-  /* botón hamburguesa alineado a la derecha y centrado verticalmente */
-  .hamburger{
-    display: block;
+  .brand img {
+    position: absolute;
+    left: 10px;                /* logo fijo a la izquierda */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;               /* mantiene buen tamaño en móvil */
+    height: auto;
+  }
+
+  .brand span {
+    font-size: 1.6rem;         /* ajusta según tu gusto */
+    font-weight: 800;
+    color: var(--brand);
+    text-align: center;
+  }
+
+  /* opcional: centra el menú hamburguesa a la derecha */
+  .hamburger {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;                /* por encima del texto centrado */
-  }
-
-  /* menú desplegable en móvil (mantiene tu comportamiento actual) */
-  .menu{
-    display: none;
-    position: absolute;
-    top: 64px;                 /* justo debajo del header */
-    right: 10px;
-    background: #fff;
-    border: 1px solid #e6ece8;
-    border-radius: 12px;
-    flex-direction: column;
-    padding: .5rem;
-    box-shadow: 0 10px 24px rgba(0,0,0,.06);
-  }
-  #nav-toggle:checked + .hamburger + .menu{
-    display: flex;
   }
 }
