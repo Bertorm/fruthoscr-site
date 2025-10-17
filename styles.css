@@ -70,8 +70,8 @@ body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .brand span {
-  font-size: 1.2rem;      /* ← Aumenta o reduce según prefieras */
-  font-weight: 600;       /* Hace que se vea sólido, sin ser tan grueso */
+  font-size: 1.8rem;      /* ← Aumenta o reduce según prefieras */
+  font-weight: 800;       /* Hace que se vea sólido, sin ser tan grueso */
   color: var(--brand);    /* Usa el morado corporativo */
   letter-spacing: 0.5px;  /* Espaciado elegante entre letras */
 }
