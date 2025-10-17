@@ -93,7 +93,7 @@ body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   }
 
   .brand img {
-    width: 95px;       /* ← aumenta tamaño del logo */
+    width: 150px;       /* ← aumenta tamaño del logo */
     max-width: 35vw;   /* ← asegura que no se salga de pantalla */
     height: auto;
   }
