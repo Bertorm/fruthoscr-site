@@ -105,5 +105,31 @@ body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     font-weight: 800;
   }
 }
+/* ====== SECCIÓN UBÍQUENOS ====== */
+.mapa {
+  text-align: center;
+  padding-block: 2rem 3rem;
+}
+
+.mapa h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.mapa-frame {
+  margin: 1.5rem auto;
+  max-width: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.mapa-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
 
 
