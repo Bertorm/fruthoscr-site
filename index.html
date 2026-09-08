@@ -10,7 +10,8 @@
   <meta name="description" content="Distribución mayorista y compra de frutas frescas en Costa Rica (CENADA) y exportación. Banano, plátano, limón mesina, limón mandarina, papaya, piña y melón.">
   
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/styles.css?v=2">
+  <!-- Versionado para forzar actualización inmediata de caché -->
+  <link rel="stylesheet" href="/styles.css?v=3">
   <link rel="canonical" href="https://www.fruthoscr.com/" />
   <meta name="theme-color" content="#842fa7">
   <meta name="robots" content="index,follow">
@@ -62,7 +63,7 @@
   <!-- Header Centrado en Dos Niveles -->
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Nivel 1: Logo compacto y Nombre grande alineados en la misma línea al centro -->
+      <!-- Nivel 1: Logo compacto y Nombre grande alineados horizontalmente al centro -->
       <a href="/" class="brand">
         <img src="/assets/logo.png" alt="Fruthos del Trópico">
         <span>Fruthos del Trópico</span>
@@ -101,7 +102,7 @@
       </div>
     </section>
 
-    <!-- Catálogo: Cuadro solo para la imagen a 160px; Familia y Variedades fuera -->
+    <!-- Catálogo: Imagen en recuadro con dimensiones originales (160px object-fit: cover); Familia y Variedad afuera -->
     <section id="productos" class="products container">
       <h2>Nuestros productos y variedades</h2>
       <p style="color: var(--muted); margin-bottom: 2rem;">Abastecimiento mayorista continuo, selección rigurosa por calibre y empaque adaptado a su canal comercial.</p>
@@ -109,10 +110,10 @@
       <div class="grid-prod">
         <!-- 1. Bananos -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/banano.jpg" alt="Bananos">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Bananos</h3>
             <ul class="variety-list">
               <li>Banano Cavendish (Exportación y convencional)</li>
@@ -124,10 +125,10 @@
 
         <!-- 2. Cítricos -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/limon.jpg" alt="Cítricos y Limones">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Cítricos</h3>
             <ul class="variety-list">
               <li>Limón Mesina (Persa)</li>
@@ -138,10 +139,10 @@
 
         <!-- 3. Papaya -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/papaya.jpg" alt="Papaya">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Papaya</h3>
             <ul class="variety-list">
               <li>Papaya Pococí / Híbrida</li>
@@ -151,10 +152,10 @@
 
         <!-- 4. Piña -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/pina.jpg" alt="Piña">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Piña</h3>
             <ul class="variety-list">
               <li>Piña Golden (MD2)</li>
@@ -164,10 +165,10 @@
 
         <!-- 5. Melón -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/melon.jpg" alt="Melón">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Melón</h3>
             <ul class="variety-list">
               <li>Melón Cantaloupe / Variedades</li>
@@ -177,10 +178,10 @@
 
         <!-- 6. Plátano -->
         <div class="prod">
-          <div class="prod-thumb">
+          <div class="prod-img-box">
             <img src="/assets/platano.jpg" alt="Plátano">
           </div>
-          <div class="prod-desc">
+          <div class="prod-info">
             <h3>Plátano</h3>
             <ul class="variety-list">
               <li>Verde y Maduro</li>
