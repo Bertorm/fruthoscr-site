@@ -266,7 +266,7 @@ img {
   padding: 0;
 }
 
-/* EL CUADRO DE LA IMAGEN: Proporción balanceada y margen interno */
+/* El cuadro de la imagen: 240px de altura para máxima presencia */
 .prod-img-box {
   background: #ffffff !important;
   border: 1px solid #e7ece9 !important;
@@ -274,8 +274,8 @@ img {
   overflow: hidden !important;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
   width: 100% !important;
-  height: 240px !important;        /* <-- Subimos de 185px a 240px */
-  padding: 6px !important;         /* <-- Menos margen para que la fruta crezca */
+  height: 240px !important;          /* Altura calibrada para frutas verticales */
+  padding: 6px !important;           /* Menor margen para que la fruta crezca */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -288,18 +288,18 @@ img {
   border-color: #d8c2e6 !important;
 }
 
-/* LA IMAGEN: Se muestra ENTERA al 100% sin recortarse */
+/* La imagen entera sin recortes */
 .prod-img-box img,
 .prod img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
-  object-fit: contain !important;    /* <-- Muestra toda la fruta sin cortar puntas */
+  object-fit: contain !important;
   background-color: transparent !important;
 }
 
-/* TEXTO: Familia y Variedad ubicadas AFUERA del cuadro */
+/* Texto de producto fuera del cuadro */
 .prod-info {
   padding-top: 0.9rem;
   text-align: left;
@@ -330,6 +330,66 @@ img {
 }
 
 /* =========================================================
+   CONTACTO Y REDES SOCIALES
+   ========================================================= */
+.contact { padding-block: 2rem; }
+.contact-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+  max-width: 600px;
+  line-height: 1.8;
+}
+.contact-card a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-wrapper {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e6e2;
+}
+
+.social-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.6rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-social {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background: #ffffff;
+  border: 1px solid #d8c2e6;
+  border-radius: 8px;
+  color: var(--brand) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.btn-social:hover {
+  background: var(--brand);
+  color: #ffffff !important;
+  border-color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(132, 47, 167, 0.2);
+}
+
+/* =========================================================
    RESTO DE SECCIONES
    ========================================================= */
 .features { padding-block: 2rem; }
@@ -351,21 +411,6 @@ img {
   box-shadow: 0 4px 14px rgba(0,0,0,.04);
 }
 .card h3 { margin: .2rem 0; }
-
-.contact { padding-block: 2rem; }
-.contact-card {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 14px rgba(0,0,0,.04);
-  max-width: 600px;
-  line-height: 1.8;
-}
-.contact-card a {
-  color: var(--brand);
-  text-decoration: none;
-  font-weight: 600;
-}
 
 .mapa-frame {
   margin: 1.5rem auto;
