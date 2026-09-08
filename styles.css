@@ -240,62 +240,70 @@ body {
 }
 
 /* =========================================================
-   CUADRÍCULA DE PRODUCTOS (FOTO EN CUADRO + TEXTO FUERA)
+   CUADRÍCULA DE PRODUCTOS
+   Foto confinada a cuadro de 160px; texto fuera al aire
    ========================================================= */
 .products { padding-block: 2.5rem; }
 .products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 
-/* 3 columnas equilibradas para albergar las 6 familias */
 .grid-prod {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem 2rem;
-}
-
-.prod-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: transparent;
-  border: none;
-}
-
-/* Solo la foto lleva cuadro blanco, borde y sombra */
-.prod-photo-box {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
   width: 100%;
-  height: 170px;
-  background: #ffffff;
-  border: 1px solid #e7ece9;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.prod {
+  display: flex !important;
+  flex-direction: column !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* El recuadro blanco que envuelve exclusivamente a la foto */
+.prod-thumb {
+  width: 100% !important;
+  height: 160px !important;     /* Altura idéntica original */
+  max-height: 160px !important;
+  background: #ffffff !important;
+  border: 1px solid #e7ece9 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.prod-photo-box:hover {
+.prod:hover .prod-thumb {
   transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(132, 47, 167, 0.12);
-  border-color: #d8c2e6;
+  box-shadow: 0 10px 22px rgba(132, 47, 167, 0.12) !important;
+  border-color: #d8c2e6 !important;
 }
 
-.prod-photo-box img {
+/* La imagen forzada al 100% de ancho y 160px de alto, sin deformarse */
+.prod-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: 160px !important;
+  max-height: 160px !important;
+  object-fit: cover !important;
+  background-color: #ffffff;
+}
+
+/* Texto fuera del cuadro, reposando directamente sobre el fondo */
+.prod-desc {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  padding-top: 0.85rem;
+  text-align: left;
 }
 
-/* Contenido fuera del cuadro, integrado sobre el fondo */
-.prod-content {
-  width: 100%;
-  padding-top: 1rem;
-}
-
-.prod-content h3 {
-  margin: 0 0 0.5rem 0;
+.prod-desc h3 {
+  margin: 0 0 0.4rem 0;
   font-size: 1.35rem;
   color: var(--fg);
   font-weight: 800;
@@ -311,7 +319,7 @@ body {
 }
 
 .variety-list li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .variety-list li:last-child {
@@ -387,12 +395,12 @@ body {
 .foot-nav a { text-decoration: none; color: var(--fg); }
 
 @media (max-width: 960px) {
-  .grid-prod { grid-template-columns: repeat(2, 1fr); }
+  .grid-prod { grid-template-columns: repeat(2, 1fr) !important; }
   .cards { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .grid-prod { grid-template-columns: 1fr; }
+  .grid-prod { grid-template-columns: 1fr !important; }
   .hero { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
 }
