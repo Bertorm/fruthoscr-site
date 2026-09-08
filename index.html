@@ -11,8 +11,8 @@
   
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/styles.css">
-  <meta name="theme-color" content="#842fa7">
   <link rel="canonical" href="https://www.fruthoscr.com/" />
+  <meta name="theme-color" content="#842fa7">
   <meta name="robots" content="index,follow">
 
   <!-- Datos estructurados Schema.org -->
@@ -56,22 +56,23 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <!-- Header Centrado en Dos Niveles -->
   <header class="site-header">
-    <div class="container header-content">
-      <!-- Marca centrada (Logo + Nombre en una sola línea elegante) -->
-      <div class="brand-centered">
-        <img src="/assets/logo.png" alt="Fruthos del Trópico" class="header-logo">
-        <span class="brand-title">Fruthos del Trópico</span>
-      </div>
+    <div class="container header-inner">
+      <!-- Nivel 1: Logo compacto y Nombre grande en una sola línea -->
+      <a href="/" class="brand">
+        <img src="/assets/logo.png" alt="Fruthos del Trópico">
+        <span>Fruthos del Trópico</span>
+      </a>
 
-      <!-- Menú móvil (checkbox) -->
+      <!-- Menú hamburguesa para pantallas móviles -->
       <input id="nav-toggle" type="checkbox" aria-label="Abrir menú">
       <label for="nav-toggle" class="hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
 
-      <!-- Fila de enlaces / botones centrados abajo -->
-      <nav class="menu-centered" aria-label="Principal">
+      <!-- Nivel 2: Botones de navegación estilo cápsula centrados abajo -->
+      <nav class="menu" aria-label="Principal">
         <a href="#productos">Productos</a>
         <a href="#abastecimiento">Servicios</a>
         <a href="#productores">Siembras y Alianzas</a>
@@ -119,7 +120,7 @@
       </div>
     </section>
 
-    <!-- Soluciones de Abastecimiento y Distribución (Ventas B2B / B2C) -->
+    <!-- Soluciones de Abastecimiento y Distribución -->
     <section id="abastecimiento" class="container" style="padding: 3rem 1rem;">
       <h2>Soluciones de Abastecimiento y Distribución</h2>
       <p>En <strong>Fruthos del Trópico</strong> adaptamos nuestro producto a las necesidades operativas de cada cliente. Gestionamos diferentes tipos de calidad, grados de selección y soluciones de empaque a la medida (cajas, canastillas o a granel), suministrando fruta fresca óptima para cada destino comercial.</p>
@@ -174,7 +175,7 @@
       </ul>
     </section>
 
-    <!-- Datos de Contacto -->
+    <!-- Contacto -->
     <section id="contacto" class="contact container">
       <h2>Contáctenos</h2>
       <div class="contact-card">
