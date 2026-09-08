@@ -89,7 +89,7 @@ body {
 }
 
 .brand img {
-  height: 105px !important;
+  height: 68px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
@@ -188,7 +188,7 @@ body {
 }
 
 /* =========================================================
-   SECCIONES DE CONTENIDO
+   SECCIÓN HERO
    ========================================================= */
 .hero {
   display: grid;
@@ -239,29 +239,78 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,.07);
 }
 
+/* =========================================================
+   TABLA DE PRODUCTOS B2B
+   ========================================================= */
 .products { padding-block: 2rem; }
-.products h2 { font-size: 1.8rem; margin-bottom: 1rem; }
-.grid-prod {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-}
-.prod {
-  background: #fff;
-  border: 1px solid #e7ece9;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,.05);
-  text-align: center;
-}
-.prod img {
-  display: block;
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.prod h3 { margin: .6rem 0 1rem 0; }
+.products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e7ece9;
+  background: #ffffff;
+}
+
+.b2b-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.98rem;
+}
+
+.b2b-table thead {
+  background-color: rgba(132, 47, 167, 0.08);
+  border-bottom: 2px solid #e0d1e6;
+}
+
+.b2b-table th {
+  padding: 1rem 1.2rem;
+  color: var(--brand);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.b2b-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #edf2ef;
+  vertical-align: middle;
+  color: var(--fg);
+}
+
+.b2b-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.b2b-table tbody tr:hover {
+  background-color: #fafdfb;
+}
+
+.b2b-table td strong {
+  font-size: 1.05rem;
+  color: #1a3328;
+}
+
+.b2b-table ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.b2b-table li {
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.b2b-table li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   RESTO DE SECCIONES
+   ========================================================= */
 .features { padding-block: 2rem; }
 .features h2 { font-size: 1.8rem; margin-bottom: 1rem; }
 .story { max-width: 900px; }
@@ -328,10 +377,9 @@ body {
 .foot-nav a { text-decoration: none; color: var(--fg); }
 
 @media (max-width: 1100px) {
-  .grid-prod { grid-template-columns: repeat(3, 1fr); }
+  .cards { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; }
-  .grid-prod { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
 }
