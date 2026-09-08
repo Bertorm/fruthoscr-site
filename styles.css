@@ -34,7 +34,7 @@ body {
   background-size: cover;
 }
 
-/* Blindaje general contra desbordamiento */
+/* Blindaje general */
 img {
   max-width: 100%;
 }
@@ -245,19 +245,17 @@ img {
 }
 
 /* =========================================================
-   SECCIÓN PRODUCTOS: CONFIGURACIÓN ORIGINAL DE IMÁGENES
+   SECCIÓN PRODUCTOS: FOTO COMPLETA (CONTAIN) + TEXTO FUERA
    ========================================================= */
 .products { padding-block: 2.5rem; }
 .products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 
-/* Grid de 3 columnas para equilibrar las 6 familias */
 .grid-prod {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  gap: 2rem 1.5rem !important;
+  gap: 2.2rem 1.6rem !important;
 }
 
-/* Contenedor general del ítem (transparente, sin envoltorio global) */
 .prod {
   display: flex;
   flex-direction: column;
@@ -268,7 +266,7 @@ img {
   padding: 0;
 }
 
-/* EL CUADRO DE LA IMAGEN: idéntico al estilo anterior de .prod */
+/* EL CUADRO DE LA IMAGEN: Proporción balanceada y margen interno */
 .prod-img-box {
   background: #ffffff !important;
   border: 1px solid #e7ece9 !important;
@@ -276,8 +274,8 @@ img {
   overflow: hidden !important;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
   width: 100% !important;
-  height: 160px !important;
-  max-height: 160px !important;
+  height: 185px !important;          /* Altura ideal para fruta completa */
+  padding: 10px !important;          /* Margen para que no pegue a los bordes */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -290,15 +288,15 @@ img {
   border-color: #d8c2e6 !important;
 }
 
-/* LA IMAGEN: Configuración idéntica a tu archivo anterior (.prod img) */
+/* LA IMAGEN: Se muestra ENTERA al 100% sin recortarse */
 .prod-img-box img,
 .prod img {
   display: block !important;
   width: 100% !important;
-  height: 160px !important;
-  max-height: 160px !important;
-  object-fit: cover !important;
-  background-color: #ffffff;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;    /* <-- Muestra toda la fruta sin cortar puntas */
+  background-color: transparent !important;
 }
 
 /* TEXTO: Familia y Variedad ubicadas AFUERA del cuadro */
