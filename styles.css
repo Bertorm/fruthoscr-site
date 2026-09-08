@@ -1,8 +1,8 @@
 :root {
-  /* Colores corporativos (orden: Morado, Verde, Amarillo) */
-  --brand:    #842fa7; /* PANTONE 527 - Morado */
-  --brand-2:  #9fcf67; /* PANTONE 375 - Verde */
-  --accent:   #fcdd00; /* PANTONE Yellow - Amarillo */
+  /* Colores corporativos (PANTONE: Morado 527, Verde 375, Amarillo) */
+  --brand:    #842fa7;
+  --brand-2:  #9fcf67;
+  --accent:   #fcdd00;
 
   --bg: #ffffff;
   --fg: #0b2e1f;
@@ -55,15 +55,16 @@ body {
 }
 
 /* =========================================================
-   HEADER CENTRADO EN DOS NIVELES
+   HEADER: MARCA CENTRADA EN UNA LÍNEA + BOTONES ABAJO
    ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
   backdrop-filter: saturate(150%) blur(8px);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid #e6ece8;
   z-index: 50;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
 }
 
 .header-inner {
@@ -72,38 +73,39 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.8rem 1rem 0.6rem;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
-/* Nivel 1: Logo compacto y Nombre grande en una sola línea horizontal */
+/* Nivel 1: Logo compacto y Nombre grande alineados horizontalmente al centro */
 .brand {
   display: inline-flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 1rem;
+  gap: 1.25rem;
   text-decoration: none !important;
   border: none;
   outline: none;
 }
 
 .brand img {
-  height: 60px !important;
+  height: 68px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
 }
 
 .brand span {
-  font-size: 2.3rem !important;
+  font-size: 2.4rem !important;
   font-weight: 800 !important;
   color: var(--brand) !important;
   letter-spacing: -0.5px;
   line-height: 1 !important;
   white-space: nowrap;
+  text-decoration: none !important;
 }
 
-/* Nivel 2: Botones con estilo cápsula suave centrados abajo */
+/* Nivel 2: Fila de Botones estilo cápsula limpia sin subrayados */
 .menu {
   display: flex;
   justify-content: center;
@@ -115,9 +117,9 @@ body {
 .menu a {
   color: var(--fg);
   text-decoration: none !important;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 10px;
   transition: background-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
@@ -142,15 +144,18 @@ body {
 }
 #nav-toggle { display: none; }
 
-/* Responsive Header Móvil */
+/* Adaptación para pantallas móviles */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.6rem 1rem;
   }
+  .brand {
+    gap: 0.6rem;
+  }
   .brand img {
-    height: 44px !important;
+    height: 46px !important;
   }
   .brand span {
     font-size: 1.4rem !important;
@@ -170,6 +175,7 @@ body {
     flex-direction: column;
     padding: 0.75rem;
     box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    gap: 0.3rem;
   }
   #nav-toggle:checked ~ .menu {
     display: flex;
@@ -182,7 +188,7 @@ body {
 }
 
 /* =========================================================
-   SECCIONES Y COMPONENTES
+   SECCIONES DE CONTENIDO
    ========================================================= */
 .hero {
   display: grid;
@@ -211,7 +217,7 @@ body {
   border: 2px solid var(--brand);
   padding: .7rem 1rem;
   border-radius: 12px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 600;
 }
 .btn-primary {
@@ -277,32 +283,20 @@ body {
 .card h3 { margin: .2rem 0; }
 
 .contact { padding-block: 2rem; }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+.contact-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+  max-width: 600px;
+  line-height: 1.8;
 }
-.contact-form { display: grid; gap: .6rem; }
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  border: 1px solid #dfe7e3;
-  border-radius: 12px;
-  padding: .6rem .75rem;
-  font: inherit;
-}
-.contact-form input:focus, .contact-form textarea:focus {
-  outline: 2px solid #bfe3d2;
-  border-color: #97d3b8;
+.contact-card a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.mapa {
-  text-align: center;
-  padding-block: 2rem 3rem;
-}
-.mapa h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
 .mapa-frame {
   margin: 1.5rem auto;
   max-width: 800px;
@@ -340,5 +334,4 @@ body {
   .hero { grid-template-columns: 1fr; }
   .grid-prod { grid-template-columns: 1fr 1fr; }
   .cards { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
 }
