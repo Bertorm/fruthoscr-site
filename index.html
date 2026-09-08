@@ -57,16 +57,21 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header">
-    <div class="container nav">
-      <div class="brand">
-        <img src="/assets/logo.png" alt="Fruthos del Trópico" width="350" height="150">
-        <span>Fruthos del Trópico</span>
+    <div class="container header-content">
+      <!-- Marca centrada (Logo + Nombre en una sola línea elegante) -->
+      <div class="brand-centered">
+        <img src="/assets/logo.png" alt="Fruthos del Trópico" class="header-logo">
+        <span class="brand-title">Fruthos del Trópico</span>
       </div>
+
+      <!-- Menú móvil (checkbox) -->
       <input id="nav-toggle" type="checkbox" aria-label="Abrir menú">
       <label for="nav-toggle" class="hamburger" aria-hidden="true">
         <span></span><span></span><span></span>
       </label>
-      <nav class="menu" aria-label="Principal">
+
+      <!-- Fila de enlaces / botones centrados abajo -->
+      <nav class="menu-centered" aria-label="Principal">
         <a href="#productos">Productos</a>
         <a href="#abastecimiento">Servicios</a>
         <a href="#productores">Siembras y Alianzas</a>
