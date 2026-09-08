@@ -61,10 +61,9 @@ body {
   position: sticky;
   top: 0;
   backdrop-filter: saturate(150%) blur(8px);
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid #e6ece8;
   z-index: 50;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
 }
 
 .header-inner {
@@ -72,57 +71,60 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 1rem 0.6rem;
-  position: relative;
+  padding: 0.8rem 1rem 0.6rem;
+  gap: 0.5rem;
 }
 
-/* Nivel 1: Marca centrada */
+/* Nivel 1: Logo compacto y Nombre grande en una sola línea horizontal */
 .brand {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-decoration: none;
-  margin-bottom: 0.6rem;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem;
+  text-decoration: none !important;
+  border: none;
+  outline: none;
 }
 
 .brand img {
-  height: 62px;
-  width: auto;
+  height: 60px !important;
+  width: auto !important;
   object-fit: contain;
   display: block;
 }
 
 .brand span {
-  font-size: 1.95rem;
-  font-weight: 800;
-  color: var(--brand);
+  font-size: 2.3rem !important;
+  font-weight: 800 !important;
+  color: var(--brand) !important;
   letter-spacing: -0.5px;
+  line-height: 1 !important;
   white-space: nowrap;
-  line-height: 1;
 }
 
-/* Nivel 2: Botones de navegación centrados */
+/* Nivel 2: Botones con estilo cápsula suave centrados abajo */
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
 .menu a {
-  color: #2b3b33;
-  text-decoration: none;
-  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none !important;
+  font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.45rem 0.95rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 10px;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
 .menu a:hover {
-  background: rgba(132, 47, 167, 0.08);
+  background: #edf3ef;
   color: var(--brand);
 }
 
@@ -145,17 +147,13 @@ body {
   .header-inner {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.7rem 1rem;
-  }
-  .brand {
-    margin-bottom: 0;
-    gap: 8px;
+    padding: 0.6rem 1rem;
   }
   .brand img {
-    height: 48px;
+    height: 44px !important;
   }
   .brand span {
-    font-size: 1.35rem;
+    font-size: 1.4rem !important;
   }
   .hamburger {
     display: block;
@@ -164,15 +162,14 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 10px;
-    right: 10px;
-    background: #fff;
+    left: 12px;
+    right: 12px;
+    background: #ffffff;
     border: 1px solid #e6ece8;
     border-radius: 14px;
     flex-direction: column;
-    padding: 0.8rem;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-    gap: 0.3rem;
+    padding: 0.75rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
   }
   #nav-toggle:checked ~ .menu {
     display: flex;
@@ -180,12 +177,12 @@ body {
   .menu a {
     width: 100%;
     text-align: center;
-    padding: 0.6rem;
+    padding: 0.65rem;
   }
 }
 
 /* =========================================================
-   RESTO DE SECCIONES
+   SECCIONES Y COMPONENTES
    ========================================================= */
 .hero {
   display: grid;
