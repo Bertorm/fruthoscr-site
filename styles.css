@@ -34,6 +34,11 @@ body {
   background-size: cover;
 }
 
+/* Blindaje general contra desbordamiento */
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: var(--container);
   margin-inline: auto;
@@ -240,53 +245,54 @@ body {
 }
 
 /* =========================================================
-   CUADRÍCULA DE PRODUCTOS
-   Foto confinada a cuadro de 160px; texto fuera al aire
+   SECCIÓN PRODUCTOS: CONFIGURACIÓN ORIGINAL DE IMÁGENES
    ========================================================= */
 .products { padding-block: 2.5rem; }
 .products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 
+/* Grid de 3 columnas para equilibrar las 6 familias */
 .grid-prod {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  gap: 2rem !important;
-  width: 100%;
+  gap: 2rem 1.5rem !important;
 }
 
+/* Contenedor general del ítem (transparente, sin envoltorio global) */
 .prod {
-  display: flex !important;
-  flex-direction: column !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* El recuadro blanco que envuelve exclusivamente a la foto */
-.prod-thumb {
-  width: 100% !important;
-  height: 160px !important;     /* Altura idéntica original */
-  max-height: 160px !important;
+/* EL CUADRO DE LA IMAGEN: idéntico al estilo anterior de .prod */
+.prod-img-box {
   background: #ffffff !important;
   border: 1px solid #e7ece9 !important;
   border-radius: 16px !important;
   overflow: hidden !important;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+  width: 100% !important;
+  height: 160px !important;
+  max-height: 160px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.prod:hover .prod-thumb {
+.prod:hover .prod-img-box {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(132, 47, 167, 0.12) !important;
   border-color: #d8c2e6 !important;
 }
 
-/* La imagen forzada al 100% de ancho y 160px de alto, sin deformarse */
-.prod-thumb img {
+/* LA IMAGEN: Configuración idéntica a tu archivo anterior (.prod img) */
+.prod-img-box img,
+.prod img {
   display: block !important;
   width: 100% !important;
   height: 160px !important;
@@ -295,15 +301,14 @@ body {
   background-color: #ffffff;
 }
 
-/* Texto fuera del cuadro, reposando directamente sobre el fondo */
-.prod-desc {
-  width: 100%;
-  padding-top: 0.85rem;
+/* TEXTO: Familia y Variedad ubicadas AFUERA del cuadro */
+.prod-info {
+  padding-top: 0.9rem;
   text-align: left;
 }
 
-.prod-desc h3 {
-  margin: 0 0 0.4rem 0;
+.prod-info h3 {
+  margin: 0 0 0.45rem 0;
   font-size: 1.35rem;
   color: var(--fg);
   font-weight: 800;
