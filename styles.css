@@ -89,7 +89,7 @@ body {
 }
 
 .brand img {
-  height: 120px !important;
+  height: 80px !important;
   width: auto !important;
   object-fit: contain;
   display: block;
