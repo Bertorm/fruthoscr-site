@@ -240,70 +240,78 @@ body {
 }
 
 /* =========================================================
-   CUADRÍCULA DE PRODUCTOS (FAMILIA + VARIEDADES)
+   CUADRÍCULA DE PRODUCTOS (FOTO EN CUADRO + TEXTO FUERA)
    ========================================================= */
 .products { padding-block: 2.5rem; }
 .products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
 
+/* 3 columnas equilibradas para albergar las 6 familias */
 .grid-prod {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2.5rem 2rem;
 }
 
-.prod {
+.prod-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+}
+
+/* Solo la foto lleva cuadro blanco, borde y sombra */
+.prod-photo-box {
+  width: 100%;
+  height: 170px;
   background: #ffffff;
   border: 1px solid #e7ece9;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-  margin: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.prod:hover {
+.prod-photo-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(132, 47, 167, 0.1);
+  box-shadow: 0 10px 22px rgba(132, 47, 167, 0.12);
   border-color: #d8c2e6;
 }
 
-/* Altura uniforme fija para todas las fotos */
-.prod img {
-  display: block;
+.prod-photo-box img {
   width: 100%;
-  height: 160px;
+  height: 100%;
   object-fit: cover;
-  background-color: #f7faf8;
+  display: block;
 }
 
-.prod-body {
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  text-align: left;
+/* Contenido fuera del cuadro, integrado sobre el fondo */
+.prod-content {
+  width: 100%;
+  padding-top: 1rem;
 }
 
-.prod-body h3 {
-  margin: 0 0 0.6rem 0;
-  font-size: 1.3rem;
-  color: var(--brand);
+.prod-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+  color: var(--fg);
   font-weight: 800;
 }
 
 .variety-list {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.15rem;
   list-style-type: disc;
   color: #3b4d44;
   font-size: 0.95rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .variety-list li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .variety-list li:last-child {
