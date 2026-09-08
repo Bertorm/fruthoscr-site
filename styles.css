@@ -274,8 +274,8 @@ img {
   overflow: hidden !important;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
   width: 100% !important;
-  height: 185px !important;          /* Altura ideal para fruta completa */
-  padding: 10px !important;          /* Margen para que no pegue a los bordes */
+  height: 240px !important;        /* <-- Subimos de 185px a 240px */
+  padding: 6px !important;         /* <-- Menos margen para que la fruta crezca */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
